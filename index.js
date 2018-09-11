@@ -6,6 +6,8 @@ const path = require('path');
 const fs = require('fs');
 const sizeOf = require('image-size');
 
+wkhtmltopdf.command = 'xvfb-run wkhtmltopdf'; //sdistefano: use XVFB
+
 const template = require(`./templates/default`);
 
 module.exports = (key, config = {}) => async (invoiceId, data = {}) => {
